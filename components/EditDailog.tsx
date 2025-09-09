@@ -131,7 +131,7 @@ export function EditDailog({ id, isOpen, onClose }: EditDailogProps) {
                 </Popover>
               </div>
               <Select
-                value={task.category[0]} // show the first selected category
+                value={task.category?.[0] ?? ""} // show the first selected category
                 onValueChange={(value) =>
                   setTask((prev) => ({
                     ...prev,

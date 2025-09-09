@@ -107,7 +107,7 @@ export default function Page() {
           </Popover>
         </div>
         <Select
-          value={task.category[0]} // show the first selected category
+          value={task.category?.[0] ?? ""}
           onValueChange={(value) =>
             setTask((prev) => ({
               ...prev,
