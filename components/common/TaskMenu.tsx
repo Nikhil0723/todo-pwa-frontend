@@ -25,7 +25,7 @@ export function TaskMenu({ id }: { id: string }) {
     completed: false,
     category: [],
     colour: "",
-    pinned: false,
+    pinned: false, 
   });
   const router = useRouter();
   useEffect(() => {

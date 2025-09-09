@@ -4,7 +4,7 @@ export interface ITask {
   description?: string;
   date: string;
   completed: boolean;
-  category: string[];
-  colour: string;
-  pinned: boolean;
+  category?: string[];
+  colour?: string;
+  pinned?: boolean;
 }
