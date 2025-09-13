@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-amber-100 `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-indigo-950 `}
       >
         <div className=" max-w-5xl mx-auto">
           <Header />

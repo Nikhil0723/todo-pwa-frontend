@@ -48,7 +48,7 @@ export default function Page() {
   };
 
   return (
-    <div className=" w-full">
+    <div className=" w-full text-white">
       <div className=" max-w-md mx-auto flex flex-col gap-5">
         <Input
           type="text"
@@ -57,10 +57,11 @@ export default function Page() {
           onChange={(e) =>
             setTask((prev) => ({ ...prev, title: e.target.value }))
           }
+          className=" p-4 h-auto placeholder:font-medium placeholder:text-xl rounded-xl text-xl font-medium"
         />
         <Textarea
           placeholder="Description"
-          className="resize-none"
+          className="resize-none p-4 h-auto placeholder:font-medium placeholder:text-xl rounded-xl text-xl font-medium"
           value={task.description}
           onChange={(e) =>
             setTask((prev) => ({ ...prev, description: e.target.value }))
@@ -69,8 +70,8 @@ export default function Page() {
         <div className="relative flex gap-2">
           <Input
             id="date"
-            placeholder="June 01, 2025"
-            className="bg-background pr-10"
+            placeholder="June 01, 2025 "
+            className=" p-4 h-auto placeholder:font-medium placeholder:text-xl rounded-xl text-lg font-medium"
             value={task.date}
             readOnly // prevent manual typing (optional)
           />
@@ -81,7 +82,7 @@ export default function Page() {
                 variant="ghost"
                 className="absolute top-1/2 right-2 size-6 -translate-y-1/2"
               >
-                <CalendarIcon className="size-3.5" />
+                <CalendarIcon className=" text-2xl" />
                 <span className="sr-only">Select date</span>
               </Button>
             </PopoverTrigger>
@@ -115,8 +116,8 @@ export default function Page() {
             }))
           }
         >
-          <SelectTrigger className=" w-full">
-            <SelectValue placeholder="Category" />
+          <SelectTrigger className=" w-full  p-4 h-auto placeholder:font-medium placeholder:text-xl rounded-xl text-lg font-medium">
+            <SelectValue placeholder="Category" className="h-auto p-4" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="home">Home</SelectItem>
@@ -156,7 +157,12 @@ export default function Page() {
             </SelectItem>
           </SelectContent>
         </Select>
-        <Button onClick={addTask}></Button>
+        <Button
+          onClick={addTask}
+          className="h-auto p-4 rounded-4xl text-white bg-fuchsia-700 hover:shadow-lg hover:bg-fuchsia-700 shadow-fuchsia-600 "
+        >
+          Create Task
+        </Button>
       </div>
     </div>
   );

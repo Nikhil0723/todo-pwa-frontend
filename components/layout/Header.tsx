@@ -1,13 +1,20 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
+import SideBarMenu from "../SideBarMenu";
+import { ScrollArea } from "../ui/scroll-area";
 
 export default function Header() {
   return (
     <div className=" flex justify-between p-5 items-center">
       <div>
-        <h1>TODO app</h1>
-
+        <h1 className="text-white">TODO app</h1>
       </div>
       <Sheet>
         <SheetTrigger>
@@ -17,10 +24,13 @@ export default function Header() {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </SheetTrigger>
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle></SheetTitle>
-          </SheetHeader>
+        <SheetContent className="bg-zinc-700">
+          <ScrollArea className=" h-[100vh]">
+            <SheetHeader>
+              <SheetTitle></SheetTitle>
+            </SheetHeader>
+            <SideBarMenu />
+          </ScrollArea>
         </SheetContent>
       </Sheet>
     </div>
