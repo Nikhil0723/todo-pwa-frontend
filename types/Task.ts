@@ -7,4 +7,5 @@ export interface ITask {
   category?: string[];
   colour?: string;
   pinned?: boolean;
+  createdAt?: string;
 }

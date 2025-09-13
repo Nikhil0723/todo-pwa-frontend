@@ -33,7 +33,7 @@ const TaskItem = ({ task }: { task: ITask }) => {
             <h1 className="font-extrabold text-xl">{title}</h1>
             <p className=" text-xl">{description}</p>
           </div>
-          <p> {formatCreatedDate(createdAt)}</p>
+          {createdAt && <p> {formatCreatedDate(createdAt)}</p>}
         </div>
         <p>{formatTaskDate(date)}</p>
       </div>
